@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # User settings
-ESVERSION='1.2.2'
+ESVERSION='1.3.2'
 ESURL="https://download.elasticsearch.org/elasticsearch/elasticsearch"
 TARFILE="elasticsearch-${ESVERSION}.tar.gz"
 
