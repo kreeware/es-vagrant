@@ -2,8 +2,6 @@
 
 # User settings
 ESVERSION='1.3.2'
-ESURL="https://download.elasticsearch.org/elasticsearch/elasticsearch"
-TARFILE="elasticsearch-${ESVERSION}.tar.gz"
 
 # Allow installation of PPAs and update packages
 apt-get update
@@ -20,6 +18,5 @@ apt-get install -y git curl
 git clone https://github.com/isaacs/nave.git
 ./nave/nave.sh usemain stable
 npm install -g esvm
-esvm -f ${ESVERSION}
 
-echo "ElasticSearch is not running, SSH in to start it with 'esvm"
+echo "ElasticSearch is not running, SSH in to start it with 'esvm ${ESVERSION}'"
