@@ -15,8 +15,11 @@ apt-get update
 echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 apt-get install -y oracle-java7-installer
 
-# Grab and unpack ElasticSearch tarball
-wget -q "${ESURL}/${TARFILE}"
-su vagrant -c "tar -zxf ${TARFILE}"
+# Install tools required to install node
+apt-get install -y git curl
+git clone https://github.com/isaacs/nave.git
+./nave/nave.sh usemain stable
+npm install -g esvm
+esvm -f ${ESVERSION}
 
-echo "ElasticSearch is not running, SSH in to start it"
+echo "ElasticSearch is not running, SSH in to start it with 'esvm"
