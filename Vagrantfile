@@ -6,6 +6,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "60", "--cpus", "2"]
-    vb.memory = 2048
+    vb.memory = 4096
   end
 end
