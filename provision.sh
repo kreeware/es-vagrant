@@ -7,6 +7,10 @@ ESVERSION='1.3.2'
 apt-get update
 apt-get install -y python-software-properties
 
+# Set the time zone
+echo "America/Phoenix" > /etc/timezone
+dpkg-reconfigure -f noninteractive tzdata
+
 # Automated install of Oracle Java
 add-apt-repository -y ppa:webupd8team/java
 apt-get update
@@ -19,4 +23,4 @@ git clone https://github.com/isaacs/nave.git
 ./nave/nave.sh usemain stable
 npm install -g esvm
 
-echo "ElasticSearch is not running, SSH in to start it with 'esvm ${ESVERSION}'"
+echo "ElasticSearch is not running, SSH in to start it. esvm.rc is in /vagrant"
