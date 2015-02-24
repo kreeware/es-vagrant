@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "plugins": [
+      "elasticsearch/marvel"
+    ],
+    "config": {
+      "http.cors.enabled": true,
+      "script.disable_dynamic": false,
+      "bootstrap.mlockall": true
+    }
+  },
+  "clusters": {
+    "kibana": {
+      "version": "1.4.4",
+      "directory": "/var/elasticsearch/kibana-dev",
+      "nodes": [{
+        "node": { "name": "kibana-dev" }
+      }]
+    }
+  }
+}
