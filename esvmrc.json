@@ -1,7 +1,7 @@
 {
   "defaults": {
     "plugins": [
-      "elasticsearch/marvel"
+      "elasticsearch/marvel/latest",
     ],
     "config": {
       "http.cors.enabled": true,
@@ -12,7 +12,7 @@
   "clusters": {
     "kibana": {
       "version": "1.4.4",
-      "directory": "/var/elasticsearch/kibana-dev",
+      "directory": "/home/vagrant/elasticsearch/kibana-dev",
       "nodes": [{
         "node": { "name": "kibana-dev" }
       }]
