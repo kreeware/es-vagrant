@@ -29,6 +29,9 @@ echo "* soft nproc 65535" >> /etc/security/limits.conf
 echo "* hard nproc 65535" >> /etc/security/limits.conf
 echo "* soft nofile 65535" >> /etc/security/limits.conf
 echo "* hard nofile 65535" >> /etc/security/limits.conf
+echo "* soft memlock unlimited" >> /etc/security/limits.conf
+echo "* hard memlock unlimited" >> /etc/security/limits.conf
 ulimit -n 65535
+ulimit -l unlimited
 
 echo "ElasticSearch is not running, SSH in to start it. esvm.rc is in /vagrant"
