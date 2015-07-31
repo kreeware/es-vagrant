@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "provision.sh"
   config.vm.network :forwarded_port, host: 5602, guest: 5601
   config.vm.network :forwarded_port, host: 9200, guest: 9200
+  config.vm.network :forwarded_port, host: 9201, guest: 9201
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "60", "--cpus", "2"]
