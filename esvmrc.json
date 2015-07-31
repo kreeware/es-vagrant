@@ -1,20 +1,31 @@
 {
   "defaults": {
-    "plugins": [
-      "elasticsearch/marvel/latest",
-    ],
     "config": {
+      "http.host": "0.0.0.0",
       "http.cors.enabled": true,
-      "script.disable_dynamic": false,
+      "discovery.zen.ping.multicast.enabled": false,
       "bootstrap.mlockall": true
     }
   },
   "clusters": {
     "kibana": {
-      "version": "1.4.4",
-      "directory": "/home/vagrant/elasticsearch/kibana-dev",
+      "branch": "master",
+      "directory": "/home/vagrant/elasticsearch/kibana-master",
       "nodes": [{
-        "node": { "name": "kibana-dev" }
+        "node": { "name": "k4joe-master" }
+      }]
+    },
+    "kibana-test": {
+      "version": "1.6.1",
+      "directory": "/home/vagrant/elasticsearch/kibana-145",
+      "plugins": [
+        "elasticsearch/marvel/latest"
+      ],
+      "config": {
+        "http.port": 9201
+      },
+      "nodes": [{
+        "node": { "name": "k4joe-test" }
       }]
     }
   }
