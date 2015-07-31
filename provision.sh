@@ -20,7 +20,7 @@ apt-get install -y oracle-java7-installer
 # Install tools required to install node
 apt-get install -y git curl
 git clone https://github.com/isaacs/nave.git
-./nave/nave.sh usemain stable
+./nave/nave.sh usemain 2.4.0
 npm install -g esvm
 
 # Make elasticsearch not choke
