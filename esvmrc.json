@@ -8,24 +8,24 @@
     }
   },
   "clusters": {
-    "kibana": {
+    "master": {
       "branch": "master",
-      "directory": "/home/vagrant/elasticsearch/kibana-master",
+      "directory": "/home/vagrant/elasticsearch/es-master",
       "nodes": [{
-        "node": { "name": "k4joe-master" }
+        "node": { "name": "es-master" }
       }]
     },
-    "kibana-test": {
-      "version": "1.6.1",
-      "directory": "/home/vagrant/elasticsearch/kibana-145",
+    "1x": {
+      "version": "1.7.1",
+      "directory": "/home/vagrant/elasticsearch/es-171",
       "plugins": [
         "elasticsearch/marvel/latest"
       ],
       "config": {
-        "http.port": 9201
+        "http.port": 9200
       },
       "nodes": [{
-        "node": { "name": "k4joe-test" }
+        "node": { "name": "es-171" }
       }]
     }
   }
