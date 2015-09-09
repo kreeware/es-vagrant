@@ -15,10 +15,10 @@ dpkg-reconfigure -f noninteractive tzdata
 add-apt-repository -y ppa:webupd8team/java
 apt-get update
 echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-apt-get install -y oracle-java7-installer
+apt-get install -y oracle-java8-installer
 
 # Install tools required to install node
-apt-get install -y git curl
+apt-get install -y git curl unzip screen
 git clone https://github.com/isaacs/nave.git
 ./nave/nave.sh usemain 2.4.0
 npm install -g esvm
