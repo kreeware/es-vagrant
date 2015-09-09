@@ -15,6 +15,13 @@
         "node": { "name": "es-master" }
       }]
     },
+    "2.0": {
+      "branch": "2.0",
+      "directory": "/home/vagrant/elasticsearch/es-20",
+      "nodes": [{
+        "node": { "name": "es-20" }
+      }]
+    },
     "1x": {
       "version": "1.7.1",
       "directory": "/home/vagrant/elasticsearch/es-171",
