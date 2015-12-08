@@ -15,6 +15,27 @@
         "node": { "name": "es-master" }
       }]
     },
+    "plugins": {
+      "version": "2.1.0",
+      "directory": "/home/vagrant/elasticsearch/es-with-plugins",
+      "nodes": [{
+        "node": { "name": "es-plugins" }
+      }],
+      "plugins": [
+        "license",
+        "marvel-agent",
+        "watcher",
+        "shield"
+      ],
+      "config": {
+        "security.manager.enabled": false,
+        "shield.authc.realms.shield.type": "esusers",
+        "shield.authc.realms.shield.order": 0,
+        "shield.authz.store.files.roles": "/vagrant/config/shield/roles.yml",
+        "shield.authc.realms.shield.files.users": "/vagrant/config/shield/users",
+        "shield.authc.realms.shield.files.users_roles": "/vagrant/config/shield/users_roles"
+      }
+    },
     "2.0": {
       "branch": "2.0",
       "directory": "/home/vagrant/elasticsearch/es-20",
@@ -22,15 +43,12 @@
         "node": { "name": "es-20" }
       }]
     },
-    "1x": {
+    "1.7": {
       "version": "1.7.1",
       "directory": "/home/vagrant/elasticsearch/es-171",
       "plugins": [
         "elasticsearch/marvel/latest"
       ],
-      "config": {
-        "http.port": 9200
-      },
       "nodes": [{
         "node": { "name": "es-171" }
       }]
