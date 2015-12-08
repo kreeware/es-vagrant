@@ -35,6 +35,10 @@ esvm -c esvmrc.json <cluster name>
 
 If you need to add another cluster setting or anything, just modify the `esvmrc.json` file and restart esvm.
 
+## Note about plugins
+
+The plugins cluster uses Shield, which will force you to use basic auth to connect. The default username and password shipped with this image is `esadmin` and `qwerty`, respectively.
+
 # Advanced Settings
 
 The Vagrant installer uses the `provision.sh` file to provision the server and set everything up. If you need other apps installed, check that out.
