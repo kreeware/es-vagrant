@@ -17,6 +17,11 @@ apt-get update
 echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 apt-get install -y oracle-java8-installer
 
+# Install golang, useful if you want to set up packetbeat
+#add-apt-repository -y ppa:duh/golang
+#apt-get update
+#apt-get install -y golang
+
 # Install tools required to install node
 apt-get install -y git curl
 git clone https://github.com/isaacs/nave.git
