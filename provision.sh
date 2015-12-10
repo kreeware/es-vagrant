@@ -25,7 +25,7 @@ apt-get install -y oracle-java8-installer
 # Install tools required to install node
 apt-get install -y git curl
 git clone https://github.com/isaacs/nave.git
-./nave/nave.sh usemain 2.4.0
+./nave/nave.sh usemain 4.2.3
 npm install -g esvm
 
 # Install some other often useful packages
