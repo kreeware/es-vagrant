@@ -26,7 +26,7 @@ apt-get install -y oracle-java8-installer
 apt-get install -y git curl
 git clone https://github.com/isaacs/nave.git
 ./nave/nave.sh usemain 4.2.3
-npm install -g esvm
+npm install --unsafe-perm -g esvm
 
 # Install some other often useful packages
 apt-get install -y unzip screen
