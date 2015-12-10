@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# User settings
-ESVERSION='1.3.2'
-
 # Allow installation of PPAs and update packages
 apt-get update
+apt-get upgrade
 apt-get install -y python-software-properties
 
 # Set the time zone
@@ -17,19 +15,23 @@ apt-get update
 echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 apt-get install -y oracle-java8-installer
 
-# Install golang, useful if you want to set up packetbeat
+# Install golang, optional
 #add-apt-repository -y ppa:duh/golang
 #apt-get update
 #apt-get install -y golang
 
-# Install tools required to install node
-apt-get install -y git curl
-git clone https://github.com/isaacs/nave.git
-./nave/nave.sh usemain 4.2.3
-npm install --unsafe-perm -g esvm
-
-# Install some other often useful packages
-apt-get install -y unzip screen
+# Install utils
+apt-get install -y git curl unzip screen
+# Install build tools (required for bcrypt)
+apt-get install -y make build-essential python2.7
+# Install node via nave
+# git clone https://github.com/isaacs/nave.git
+# ./nave/nave.sh usemain 4.2.3
+# Install node via nodesource
+curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -
+apt-get install -y nodejs
+# Install esvm
+npm install --unsafe-perm -g esvm@^3.1.0
 
 # Make elasticsearch not choke
 echo "#### Elasticserch settings" >> /etc/security/limits.conf
