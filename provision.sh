@@ -28,7 +28,7 @@ apt-get install -y make build-essential python2.7
 # git clone https://github.com/isaacs/nave.git
 # ./nave/nave.sh usemain 4.2.3
 # Install node via nodesource
-curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_0.12 | bash -
 apt-get install -y nodejs
 # Install esvm
 npm install --unsafe-perm -g esvm@^3.1.0
