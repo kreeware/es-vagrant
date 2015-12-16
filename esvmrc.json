@@ -36,6 +36,36 @@
         "shield.authc.realms.shield.files.users_roles": "/vagrant/config/shield/users_roles"
       }
     },
+    "shield": {
+      "version": "2.1.0",
+      "directory": "/home/vagrant/elasticsearch/es-with-shield",
+      "nodes": [{
+        "node": { "name": "es-shield" }
+      }],
+      "plugins": [
+        "license",
+        "shield"
+      ],
+      "shield": {
+        "users": [
+          {
+            "username": "kibana",
+            "password": "notsecure",
+            "roles": ["kibana4_server"]
+          },
+          {
+            "username": "user",
+            "password": "notsecure",
+            "roles": ["kibana4", "marvel"]
+          },
+          {
+            "username": "admin",
+            "password": "admin",
+            "roles": ["admin"]
+          }
+        ]
+      }
+    },
     "2.x": {
       "branch": "2.x",
       "directory": "/home/vagrant/elasticsearch/es-2x",
