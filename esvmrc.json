@@ -51,13 +51,13 @@
       }]
     },
     "1.7": {
-      "version": "1.7.1",
-      "directory": "/home/vagrant/elasticsearch/es-171",
+      "version": "1.7.3",
+      "directory": "/home/vagrant/elasticsearch/es-17",
       "plugins": [
         "elasticsearch/marvel/latest"
       ],
       "nodes": [{
-        "node": { "name": "es-171" }
+        "node": { "name": "es-17" }
       }]
     }
   }
